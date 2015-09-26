@@ -1,0 +1,5 @@
+To Do List:
+
+- look for better format for text files
+- upload the images
+- figure out why components not appearing on track1
