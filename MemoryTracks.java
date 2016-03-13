@@ -24,16 +24,25 @@ class MemoryTracks extends JFrame{
 	    track3.setBackground(Color.decode("#aa001a"));
 	
 	    JButton buttonNS1 = new JButton("New Set");
+		buttonNS1.setPreferredSize(new Dimension(90,30));
 	    JButton buttonH1 = new JButton("Hide");
+		buttonH1.setPreferredSize(new Dimension(90,30));
 	    JButton buttonR1 = new JButton("Reveal");
+		buttonR1.setPreferredSize(new Dimension(90,30));
 	   
 	    JButton buttonNS2 = new JButton("New Set");
+		buttonNS2.setPreferredSize(new Dimension(90,30));
 	    JButton buttonH2 = new JButton("Hide");
+		buttonH2.setPreferredSize(new Dimension(90,30));
 	    JButton buttonR2 = new JButton("Reveal");
+		buttonR2.setPreferredSize(new Dimension(90,30));
 	   
 	    JButton buttonNS3 = new JButton("New Set");
+		buttonNS3.setPreferredSize(new Dimension(90,30));
 	    JButton buttonH3 = new JButton("Hide");
+		buttonH3.setPreferredSize(new Dimension(90,30));
 	    JButton buttonR3 = new JButton("Reveal");
+		buttonR3.setPreferredSize(new Dimension(90,30));
 
 	    JLabel trackNo1 = new JLabel("1");
 	    trackNo1.setForeground(Color.decode("#ffffff"));
@@ -95,50 +104,62 @@ class MemoryTracks extends JFrame{
 	    bottomMT.setBackground(Color.decode("#bbbbbb"));
 			  
 	    JPanel controls = new JPanel();
-	    controls.setLayout(new BorderLayout());
+	 //   controls.setLayout(new GridLayout(4,3));
+		controls.setLayout(new BoxLayout(controls, BoxLayout.PAGE_AXIS));
 	    controls.setBackground(Color.decode("#ffffaa"));
 	  
-	    JLabel controlsLabel = new JLabel("Active Track");
-	    controlsLabel.setForeground(Color.decode("#000000"));
-	  
-	    JPanel controlsBtns = new JPanel();
-	    controlsBtns.setLayout(new GridLayout(3,3));	
+	    JPanel controlsLabelStrip = new JPanel();
+		controlsLabelStrip.setBackground(Color.decode("#bbbbbb"));
 		
-		paneMT.add(bottomMT);
-	    bottomMT.add(controls);
-	    controls.add(controlsLabel, BorderLayout.NORTH);
-	    controls.add(controlsBtns, BorderLayout.SOUTH);
-	  
+		JLabel controlsLabel = new JLabel("Active Track");
+		controlsLabelStrip.add(controlsLabel);
+		controls.add(controlsLabelStrip);
+		
+	    JPanel controlsActiveStrip = new JPanel();
 	    JButton active1 = new JButton("1");
 		active1.setBackground(Color.decode("#3f48cc"));
 		active1.setForeground(Color.decode("#ffffff"));
+		active1.setPreferredSize(new Dimension(100,50));
 	    JButton active2 = new JButton("2");
 		active2.setBackground(Color.decode("#22b14c"));
 		active2.setForeground(Color.decode("#ffffff"));
+		active2.setPreferredSize(new Dimension(100,50));
 	    JButton active3 = new JButton("3");
 		active3.setBackground(Color.decode("#aa001a"));
-		active3.setForeground(Color.decode("#ffffff"));
-			   	   
+		active3.setForeground(Color.decode("#ffffff"));	 
+        active3.setPreferredSize(new Dimension(100,50));		
+	    controlsActiveStrip.add(active1);
+	    controlsActiveStrip.add(active2);
+	    controlsActiveStrip.add(active3);
+		controls.add(controlsActiveStrip);
+			
+	    JPanel controlsBtnsRow1 = new JPanel();
 	    JButton startBtn = new JButton("Start");
+		startBtn.setPreferredSize(new Dimension(100,40));
 	    JButton optionsBtn = new JButton("Options");
-	    JButton saveBtn = new JButton("Save");
-	   	   
-	    JButton startoverBtn = new JButton("Start Over");
+		optionsBtn.setPreferredSize(new Dimension(100,40));
+	    JButton saveBtn = new JButton("Save");	
+        saveBtn.setPreferredSize(new Dimension(100,40));		
+		controlsBtnsRow1.add(startBtn);
+	    controlsBtnsRow1.add(optionsBtn);
+	    controlsBtnsRow1.add(saveBtn);
+		controls.add(controlsBtnsRow1);
+		
+		JPanel controlsBtnsRow2 = new JPanel();
+		JButton startoverBtn = new JButton("Start Over");
+		startoverBtn.setPreferredSize(new Dimension(100,40));
 	    JButton continueBtn = new JButton("Continue");
+		continueBtn.setPreferredSize(new Dimension(100,40));
 	    JButton exitBtn = new JButton("Exit");
-	  	  
-	    controlsBtns.add(active1);
-	    controlsBtns.add(active2);
-	    controlsBtns.add(active3);
-	   
-	    controlsBtns.add(startBtn);
-	    controlsBtns.add(optionsBtn);
-	    controlsBtns.add(saveBtn);
-	   
-	    controlsBtns.add(startoverBtn);
-	    controlsBtns.add(continueBtn);
-	    controlsBtns.add(exitBtn);
-	   		
+		exitBtn.setPreferredSize(new Dimension(100,40));
+		controlsBtnsRow2.add(startoverBtn);
+	    controlsBtnsRow2.add(continueBtn);
+	    controlsBtnsRow2.add(exitBtn);
+		controls.add(controlsBtnsRow2);
+					
+	    bottomMT.add(controls);
+		paneMT.add(bottomMT);
+	  	     		
 	    setSize(1000,600);
 	   
 	    setVisible(true);
