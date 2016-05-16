@@ -62,6 +62,27 @@ class MemoryTracks extends JFrame{
 	    JLabel trackNo3 = new JLabel("3");
 	    trackNo3.setForeground(Color.decode("#ffffff"));
 		trackNo3.setFont(new Font("Arial",Font.BOLD,50));
+		
+		JPanel pictureBox1 = new JPanel();
+		pictureBox1.setLayout(new GridLayout(1,4));
+		JPanel picture1a = new JPanel();
+		picture1a.setBackground(Color.decode("#dddddd"));
+		picture1a.setPreferredSize(new Dimension(50,50));
+		JPanel picture1b = new JPanel();
+		picture1b.setBackground(Color.decode("#dddddd"));
+		picture1b.setPreferredSize(new Dimension(50,50));
+		JPanel picture1c = new JPanel();
+		picture1c.setBackground(Color.decode("#dddddd"));
+		picture1c.setPreferredSize(new Dimension(50,50));
+		JPanel picture1d = new JPanel();
+		picture1d.setBackground(Color.decode("#dddddd"));
+		picture1d.setPreferredSize(new Dimension(50,50));
+		
+		Icon picA; 	
+        JLabel labelPicA;	
+		picA = new ImageIcon("img/image4.png");
+		labelPicA = new JLabel(picA);
+		labelPicA.setPreferredSize(new Dimension(50,50));
 	   
 	    paneMT.add(topMT);
 		
@@ -70,6 +91,12 @@ class MemoryTracks extends JFrame{
 		track1.add(buttonNS1);
 		track1.add(buttonH1);
 		track1.add(buttonR1);
+		track1.add(pictureBox1);
+		pictureBox1.add(picture1a);
+		pictureBox1.add(picture1b);
+		pictureBox1.add(picture1c);
+		pictureBox1.add(picture1d);
+		picture1a.add(labelPicA);
 		//track1.add(panel);
 		//track1.add(panel2);
 				
