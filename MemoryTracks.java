@@ -7,6 +7,9 @@ import java.text.*;
 import java.io.*;
 
 class MemoryTracks extends JFrame{   
+ //   Image[] imageCards = {image1.png,image2.png,image3.png,image4.png,image5.png,image6.png};
+//	Image[] imagesChosen = new Image[4];
+		
 	MemoryTracks(){
 		//JFrame frameMT = new JFrame("MemoryTracks");
 	    Container paneMT = getContentPane();
@@ -64,9 +67,11 @@ class MemoryTracks extends JFrame{
 		trackNo3.setFont(new Font("Arial",Font.BOLD,50));
 		
 		JPanel pictureBox1 = new JPanel();
+		pictureBox1.setBackground(Color.decode("#dd7700"));
 		pictureBox1.setLayout(new GridLayout(1,4));
 		JPanel picture1a = new JPanel();
-		picture1a.setBackground(Color.decode("#dddddd"));
+	//	picture1a.setBackground(Color.decode("#dddddd"));
+		picture1a.setBackground(Color.decode("#ddee00"));
 		picture1a.setPreferredSize(new Dimension(50,50));
 		JPanel picture1b = new JPanel();
 		picture1b.setBackground(Color.decode("#dddddd"));
@@ -80,7 +85,9 @@ class MemoryTracks extends JFrame{
 		
 		Icon picA; 	
         JLabel labelPicA;	
-		picA = new ImageIcon("img/image4.png");
+		//double picNum1 = Math.random() * 6;
+		//int randNo1 = (int)picNum1;
+		picA = new ImageIcon("img/image1.png");
 		labelPicA = new JLabel(picA);
 		labelPicA.setPreferredSize(new Dimension(50,50));
 	   
@@ -96,6 +103,7 @@ class MemoryTracks extends JFrame{
 		pictureBox1.add(picture1b);
 		pictureBox1.add(picture1c);
 		pictureBox1.add(picture1d);
+	//	track1.add(labelPicA);
 		picture1a.add(labelPicA);
 		//track1.add(panel);
 		//track1.add(panel2);
