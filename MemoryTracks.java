@@ -7,7 +7,7 @@ import java.text.*;
 import java.io.*;
 
 class MemoryTracks extends JFrame{   
- //   Image[] imageCards = {image1.png,image2.png,image3.png,image4.png,image5.png,image6.png};
+    String[] imageCards = {"image1.png","image2.png","image3.png","image4.png","image5.png","image6.png"};
 //	Image[] imagesChosen = new Image[4];
 		
 	MemoryTracks(){
@@ -69,27 +69,53 @@ class MemoryTracks extends JFrame{
 		JPanel pictureBox1 = new JPanel();
 		pictureBox1.setBackground(Color.decode("#dd7700"));
 		pictureBox1.setLayout(new GridLayout(1,4));
+	//	pictureBox1.setVgap(0);
 		JPanel picture1a = new JPanel();
+		//picture1a.setVgap(0);
 	//	picture1a.setBackground(Color.decode("#dddddd"));
 		picture1a.setBackground(Color.decode("#ddee00"));
-		picture1a.setPreferredSize(new Dimension(50,50));
+		picture1a.setPreferredSize(new Dimension(100,100));
 		JPanel picture1b = new JPanel();
 		picture1b.setBackground(Color.decode("#dddddd"));
-		picture1b.setPreferredSize(new Dimension(50,50));
+		picture1b.setPreferredSize(new Dimension(100,100));
 		JPanel picture1c = new JPanel();
 		picture1c.setBackground(Color.decode("#dddddd"));
-		picture1c.setPreferredSize(new Dimension(50,50));
+		picture1c.setPreferredSize(new Dimension(100,100));
 		JPanel picture1d = new JPanel();
 		picture1d.setBackground(Color.decode("#dddddd"));
-		picture1d.setPreferredSize(new Dimension(50,50));
+		picture1d.setPreferredSize(new Dimension(100,100));
 		
 		Icon picA; 	
         JLabel labelPicA;	
-		//double picNum1 = Math.random() * 6;
-		//int randNo1 = (int)picNum1;
-		picA = new ImageIcon("img/image1.png");
+		double picNum1 = Math.random() * 6;
+		int randNo1 = (int)picNum1;
+	    picA = new ImageIcon("img/" + imageCards[randNo1]);
 		labelPicA = new JLabel(picA);
-		labelPicA.setPreferredSize(new Dimension(50,50));
+		labelPicA.setPreferredSize(new Dimension(100,100));
+		
+		Icon picB; 	
+        JLabel labelPicB;	
+		double picNum2 = Math.random() * 6;
+		int randNo2 = (int)picNum2;
+	    picB = new ImageIcon("img/" + imageCards[randNo2]);
+		labelPicB = new JLabel(picB);
+		labelPicB.setPreferredSize(new Dimension(100,100));
+		
+		Icon picC; 	
+        JLabel labelPicC;	
+		double picNum3 = Math.random() * 6;
+		int randNo3 = (int)picNum3;
+	    picC = new ImageIcon("img/" + imageCards[randNo3]);
+		labelPicC = new JLabel(picC);
+		labelPicC.setPreferredSize(new Dimension(100,100));
+		
+		Icon picD; 	
+        JLabel labelPicD;	
+		double picNum4 = Math.random() * 6;
+		int randNo4 = (int)picNum4;
+	    picD = new ImageIcon("img/" + imageCards[randNo4]);
+		labelPicD = new JLabel(picD);
+		labelPicD.setPreferredSize(new Dimension(100,100));
 	   
 	    paneMT.add(topMT);
 		
@@ -105,6 +131,9 @@ class MemoryTracks extends JFrame{
 		pictureBox1.add(picture1d);
 	//	track1.add(labelPicA);
 		picture1a.add(labelPicA);
+		picture1b.add(labelPicB);
+		picture1c.add(labelPicC);
+		picture1d.add(labelPicD);
 		//track1.add(panel);
 		//track1.add(panel2);
 				
