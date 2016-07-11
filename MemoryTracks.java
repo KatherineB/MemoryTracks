@@ -27,34 +27,34 @@ class MemoryTracks extends JFrame{
 	    track3.setBackground(Color.decode("#aa001a"));
 	
 	    JButton buttonNS1 = new JButton("New Set");
-		buttonNS1.setPreferredSize(new Dimension(120,30));
-		buttonNS1.setFont(new Font("Arial",Font.BOLD,17));
+		buttonNS1.setPreferredSize(new Dimension(130,35));
+		buttonNS1.setFont(new Font("Arial",Font.BOLD,23));
 	    JButton buttonH1 = new JButton("Hide");
-		buttonH1.setPreferredSize(new Dimension(120,30));
-		buttonH1.setFont(new Font("Arial",Font.BOLD,17));
+		buttonH1.setPreferredSize(new Dimension(130,35));
+		buttonH1.setFont(new Font("Arial",Font.BOLD,23));
 	    JButton buttonR1 = new JButton("Reveal");
-		buttonR1.setPreferredSize(new Dimension(120,30));
-		buttonR1.setFont(new Font("Arial",Font.BOLD,17));
+		buttonR1.setPreferredSize(new Dimension(130,35));
+		buttonR1.setFont(new Font("Arial",Font.BOLD,23));
 	   
 	    JButton buttonNS2 = new JButton("New Set");
-		buttonNS2.setPreferredSize(new Dimension(120,30));
-		buttonNS2.setFont(new Font("Arial",Font.BOLD,17));
+		buttonNS2.setPreferredSize(new Dimension(130,35));
+		buttonNS2.setFont(new Font("Arial",Font.BOLD,23));
 	    JButton buttonH2 = new JButton("Hide");
-		buttonH2.setPreferredSize(new Dimension(120,30));
-		buttonH2.setFont(new Font("Arial",Font.BOLD,17));
+		buttonH2.setPreferredSize(new Dimension(130,35));
+		buttonH2.setFont(new Font("Arial",Font.BOLD,23));
 	    JButton buttonR2 = new JButton("Reveal");
-		buttonR2.setPreferredSize(new Dimension(120,30));
-		buttonR2.setFont(new Font("Arial",Font.BOLD,17));
+		buttonR2.setPreferredSize(new Dimension(130,35));
+		buttonR2.setFont(new Font("Arial",Font.BOLD,23));
 	   
 	    JButton buttonNS3 = new JButton("New Set");
-		buttonNS3.setPreferredSize(new Dimension(120,30));
-		buttonNS3.setFont(new Font("Arial",Font.BOLD,17));
+		buttonNS3.setPreferredSize(new Dimension(130,35));
+		buttonNS3.setFont(new Font("Arial",Font.BOLD,23));
 	    JButton buttonH3 = new JButton("Hide");
-		buttonH3.setPreferredSize(new Dimension(120,30));
-		buttonH3.setFont(new Font("Arial",Font.BOLD,17));
+		buttonH3.setPreferredSize(new Dimension(130,35));
+		buttonH3.setFont(new Font("Arial",Font.BOLD,23));
 	    JButton buttonR3 = new JButton("Reveal");
-		buttonR3.setPreferredSize(new Dimension(120,30));
-		buttonR3.setFont(new Font("Arial",Font.BOLD,17));
+		buttonR3.setPreferredSize(new Dimension(130,35));
+		buttonR3.setFont(new Font("Arial",Font.BOLD,23));
 
 	    JLabel trackNo1 = new JLabel("1");
 	    trackNo1.setForeground(Color.decode("#ffffff"));
@@ -188,7 +188,7 @@ class MemoryTracks extends JFrame{
 		controlsLabelStrip.setBackground(Color.decode("#bbbbbb"));
 		
 		JLabel controlsLabel = new JLabel("Active Track");
-		controlsLabel.setFont(new Font("Arial",Font.BOLD,30));
+		controlsLabel.setFont(new Font("Arial",Font.BOLD,34));
 		controlsLabelStrip.add(controlsLabel);
 		controls.add(controlsLabelStrip);
 		
@@ -215,33 +215,36 @@ class MemoryTracks extends JFrame{
 			
 	    JPanel controlsBtnsRow1 = new JPanel();
 	    JButton startBtn = new JButton("Start");
-		startBtn.setPreferredSize(new Dimension(120,30));
-		startBtn.setFont(new Font("Arial",Font.BOLD,17));
-	    JButton optionsBtn = new JButton("Options");
-		optionsBtn.setPreferredSize(new Dimension(120,30));
-		optionsBtn.setFont(new Font("Arial",Font.BOLD,17));
-	    JButton saveBtn = new JButton("Save");	
-        saveBtn.setPreferredSize(new Dimension(120,30));
-        saveBtn.setFont(new Font("Arial",Font.BOLD,17));		
+		startBtn.setPreferredSize(new Dimension(182,35));
+		startBtn.setFont(new Font("Arial",Font.BOLD,23));
+		JButton startoverBtn = new JButton("Start Over");
+		startoverBtn.setPreferredSize(new Dimension(182,35));
+		startoverBtn.setFont(new Font("Arial",Font.BOLD,23));  		
 		controlsBtnsRow1.add(startBtn);
-	    controlsBtnsRow1.add(optionsBtn);
-	    controlsBtnsRow1.add(saveBtn);
+	    controlsBtnsRow1.add(startoverBtn);
 		controls.add(controlsBtnsRow1);
 		
 		JPanel controlsBtnsRow2 = new JPanel();
-		JButton startoverBtn = new JButton("Start Over");
-		startoverBtn.setPreferredSize(new Dimension(120,30));
-		startoverBtn.setFont(new Font("Arial",Font.BOLD,17));
+		JButton optionsBtn = new JButton("Options");
+		optionsBtn.setPreferredSize(new Dimension(182,35));
+		optionsBtn.setFont(new Font("Arial",Font.BOLD,23));
 	    JButton continueBtn = new JButton("Continue");
-		continueBtn.setPreferredSize(new Dimension(120,30));
-		continueBtn.setFont(new Font("Arial",Font.BOLD,17));
-	    JButton exitBtn = new JButton("Exit");
-		exitBtn.setPreferredSize(new Dimension(120,30));
-		exitBtn.setFont(new Font("Arial",Font.BOLD,17));
-		controlsBtnsRow2.add(startoverBtn);
+		continueBtn.setPreferredSize(new Dimension(182,35));
+		continueBtn.setFont(new Font("Arial",Font.BOLD,23));	    
+		controlsBtnsRow2.add(optionsBtn);
 	    controlsBtnsRow2.add(continueBtn);
-	    controlsBtnsRow2.add(exitBtn);
 		controls.add(controlsBtnsRow2);
+		
+		JPanel controlsBtnsRow3 = new JPanel();
+		JButton saveBtn = new JButton("Save");	
+        saveBtn.setPreferredSize(new Dimension(182,35));
+        saveBtn.setFont(new Font("Arial",Font.BOLD,23));
+		JButton exitBtn = new JButton("Exit");
+		exitBtn.setPreferredSize(new Dimension(182,35));
+		exitBtn.setFont(new Font("Arial",Font.BOLD,23));
+	    controlsBtnsRow3.add(saveBtn);
+	    controlsBtnsRow3.add(exitBtn);
+		controls.add(controlsBtnsRow3);
 					
 	    bottomMT.add(controls);
 		paneMT.add(bottomMT);
