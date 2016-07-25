@@ -247,6 +247,50 @@ class MemoryTracks extends JFrame{
 		controls.add(controlsBtnsRow3);
 					
 	    bottomMT.add(controls);
+		
+		JPanel pictures = new JPanel();
+		pictures.setLayout(new BoxLayout(pictures, BoxLayout.PAGE_AXIS));
+	    pictures.setBackground(Color.decode("#ffffaa"));
+		
+		JPanel picturesLabelStrip = new JPanel();
+		picturesLabelStrip.setBackground(Color.decode("#bbbbbb"));
+		
+		JLabel picturesLabel = new JLabel("Pictures");
+		picturesLabel.setFont(new Font("Arial",Font.BOLD,34));
+				
+		picturesLabelStrip.add(picturesLabel);
+		pictures.add(picturesLabelStrip);
+		
+		JPanel picturesImageStripA = new JPanel();
+		picturesImageStripA.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel pictureImage1 = new JPanel();
+		pictureImage1.setBackground(Color.decode("#dddddd"));
+		pictureImage1.setPreferredSize(new Dimension(100,100));
+		Icon picImage1; 	
+        JLabel picLabel1;	
+	    picImage1 = new ImageIcon("img/" + imageCards[0]);
+		picLabel1 = new JLabel(picImage1);
+		picLabel1.setPreferredSize(new Dimension(70,70));
+		pictureImage1.add(picLabel1);
+		
+		JPanel pictureImage2 = new JPanel();
+		pictureImage2.setBackground(Color.decode("#dddddd"));
+		pictureImage2.setPreferredSize(new Dimension(100,100));
+		Icon picImage2; 	
+        JLabel picLabel2;	
+	    picImage2 = new ImageIcon("img/" + imageCards[1]);
+		picLabel2 = new JLabel(picImage2);
+		picLabel2.setPreferredSize(new Dimension(70,70));
+		pictureImage2.add(picLabel2);
+		
+		picturesImageStripA.add(pictureImage1);
+		picturesImageStripA.add(pictureImage2);
+		
+		pictures.add(picturesImageStripA);
+		
+		bottomMT.add(pictures);
+		
 		paneMT.add(bottomMT);
 	  	     		
 	    setSize(1000,600);
