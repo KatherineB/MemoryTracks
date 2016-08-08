@@ -8,6 +8,7 @@ import java.io.*;
 
 class MemoryTracks extends JFrame{   
     String[] imageCards = {"image1.png","image2.png","image3.png","image4.png","image5.png","image6.png"};
+	String[] numberCards = {"number1.png","number2.png","number3.png","number4.png","number5.png","number6.png"};
 //	Image[] imagesChosen = new Image[4];
 		
 	MemoryTracks(){
@@ -266,30 +267,176 @@ class MemoryTracks extends JFrame{
 		
 		JPanel pictureImage1 = new JPanel();
 		pictureImage1.setBackground(Color.decode("#dddddd"));
-		pictureImage1.setPreferredSize(new Dimension(100,100));
+		pictureImage1.setPreferredSize(new Dimension(60,60));
 		Icon picImage1; 	
         JLabel picLabel1;	
 	    picImage1 = new ImageIcon("img/" + imageCards[0]);
 		picLabel1 = new JLabel(picImage1);
-		picLabel1.setPreferredSize(new Dimension(70,70));
+		picLabel1.setPreferredSize(new Dimension(60,60));
 		pictureImage1.add(picLabel1);
 		
 		JPanel pictureImage2 = new JPanel();
 		pictureImage2.setBackground(Color.decode("#dddddd"));
-		pictureImage2.setPreferredSize(new Dimension(100,100));
+		pictureImage2.setPreferredSize(new Dimension(60,60));
 		Icon picImage2; 	
         JLabel picLabel2;	
 	    picImage2 = new ImageIcon("img/" + imageCards[1]);
 		picLabel2 = new JLabel(picImage2);
-		picLabel2.setPreferredSize(new Dimension(70,70));
+		picLabel2.setPreferredSize(new Dimension(60,60));
 		pictureImage2.add(picLabel2);
+		
+		JPanel picturesImageStripB = new JPanel();
+		picturesImageStripB.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel pictureImage3 = new JPanel();
+		pictureImage3.setBackground(Color.decode("#dddddd"));
+		pictureImage3.setPreferredSize(new Dimension(60,60));
+		Icon picImage3; 	
+        JLabel picLabel3;	
+	    picImage3 = new ImageIcon("img/" + imageCards[2]);
+		picLabel3 = new JLabel(picImage3);
+		picLabel3.setPreferredSize(new Dimension(60,60));
+		pictureImage3.add(picLabel3);
+		
+		JPanel pictureImage4 = new JPanel();
+		pictureImage4.setBackground(Color.decode("#dddddd"));
+		pictureImage4.setPreferredSize(new Dimension(60,60));
+		Icon picImage4; 	
+        JLabel picLabel4;	
+	    picImage4 = new ImageIcon("img/" + imageCards[3]);
+		picLabel4 = new JLabel(picImage4);
+		picLabel4.setPreferredSize(new Dimension(60,60));
+		pictureImage4.add(picLabel4);
+		
+		JPanel picturesImageStripC = new JPanel();
+		picturesImageStripC.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel pictureImage5 = new JPanel();
+		pictureImage5.setBackground(Color.decode("#dddddd"));
+		pictureImage5.setPreferredSize(new Dimension(60,60));
+		Icon picImage5; 	
+        JLabel picLabel5;	
+	    picImage5 = new ImageIcon("img/" + imageCards[4]);
+		picLabel5 = new JLabel(picImage5);
+		picLabel5.setPreferredSize(new Dimension(60,60));
+		pictureImage5.add(picLabel5);
+		
+		JPanel pictureImage6 = new JPanel();
+		pictureImage6.setBackground(Color.decode("#dddddd"));
+		pictureImage6.setPreferredSize(new Dimension(60,60));
+		Icon picImage6; 	
+        JLabel picLabel6;	
+	    picImage6 = new ImageIcon("img/" + imageCards[5]);
+		picLabel6 = new JLabel(picImage6);
+		picLabel6.setPreferredSize(new Dimension(60,60));
+		pictureImage6.add(picLabel6);
 		
 		picturesImageStripA.add(pictureImage1);
 		picturesImageStripA.add(pictureImage2);
+		picturesImageStripB.add(pictureImage3);
+		picturesImageStripB.add(pictureImage4);
+		picturesImageStripC.add(pictureImage5);
+		picturesImageStripC.add(pictureImage6);
 		
 		pictures.add(picturesImageStripA);
+		pictures.add(picturesImageStripB);
+		pictures.add(picturesImageStripC);
+		
+		JPanel numbers = new JPanel();
+		numbers.setLayout(new BoxLayout(numbers, BoxLayout.PAGE_AXIS));
+	    numbers.setBackground(Color.decode("#ffffaa"));
+		
+		JPanel numbersLabelStrip = new JPanel();
+		numbersLabelStrip.setBackground(Color.decode("#bbbbbb"));
+		
+		JLabel numbersLabel = new JLabel("Numbers");
+		numbersLabel.setFont(new Font("Arial",Font.BOLD,34));
+				
+		numbersLabelStrip.add(numbersLabel);
+		numbers.add(numbersLabelStrip);
+		
+		JPanel numbersImageStripA = new JPanel();
+		numbersImageStripA.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel numberImage1 = new JPanel();
+		numberImage1.setBackground(Color.decode("#dddddd"));
+		numberImage1.setPreferredSize(new Dimension(60,60));
+		Icon numImage1; 	
+        JLabel numLabel1;	
+	    numImage1 = new ImageIcon("img/" + numberCards[0]);
+		numLabel1 = new JLabel(numImage1);
+		numLabel1.setPreferredSize(new Dimension(60,60));
+		numberImage1.add(numLabel1);
+		
+		JPanel numberImage2 = new JPanel();
+		numberImage2.setBackground(Color.decode("#dddddd"));
+		numberImage2.setPreferredSize(new Dimension(60,60));
+		Icon numImage2; 	
+        JLabel numLabel2;	
+	    numImage2 = new ImageIcon("img/" + numberCards[1]);
+		numLabel2 = new JLabel(numImage2);
+		numLabel2.setPreferredSize(new Dimension(60,60));
+		numberImage2.add(numLabel2);
+		
+		JPanel numbersImageStripB = new JPanel();
+		numbersImageStripB.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel numberImage3 = new JPanel();
+		numberImage3.setBackground(Color.decode("#dddddd"));
+		numberImage3.setPreferredSize(new Dimension(60,60));
+		Icon numImage3; 	
+        JLabel numLabel3;	
+	    numImage3 = new ImageIcon("img/" + numberCards[2]);
+		numLabel3 = new JLabel(numImage3);
+		numLabel3.setPreferredSize(new Dimension(60,60));
+		numberImage3.add(numLabel3);
+		
+		JPanel numberImage4 = new JPanel();
+		numberImage4.setBackground(Color.decode("#dddddd"));
+		numberImage4.setPreferredSize(new Dimension(60,60));
+		Icon numImage4; 	
+        JLabel numLabel4;	
+	    numImage4 = new ImageIcon("img/" + numberCards[3]);
+		numLabel4 = new JLabel(numImage4);
+		numLabel4.setPreferredSize(new Dimension(60,60));
+		numberImage4.add(numLabel4);
+		
+		JPanel numbersImageStripC = new JPanel();
+		numbersImageStripC.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel numberImage5 = new JPanel();
+		numberImage5.setBackground(Color.decode("#dddddd"));
+		numberImage5.setPreferredSize(new Dimension(60,60));
+		Icon numImage5; 	
+        JLabel numLabel5;	
+	    numImage5 = new ImageIcon("img/" + numberCards[4]);
+		numLabel5 = new JLabel(numImage5);
+		numLabel5.setPreferredSize(new Dimension(60,60));
+		numberImage5.add(numLabel5);
+		
+		JPanel numberImage6 = new JPanel();
+		numberImage6.setBackground(Color.decode("#dddddd"));
+		numberImage6.setPreferredSize(new Dimension(60,60));
+		Icon numImage6; 	
+        JLabel numLabel6;	
+	    numImage6 = new ImageIcon("img/" + numberCards[5]);
+		numLabel6 = new JLabel(numImage6);
+		numLabel6.setPreferredSize(new Dimension(60,60));
+		numberImage6.add(numLabel6);
+		
+		numbersImageStripA.add(numberImage1);
+		numbersImageStripA.add(numberImage2);
+		numbersImageStripB.add(numberImage3);
+		numbersImageStripB.add(numberImage4);
+		numbersImageStripC.add(numberImage5);
+		numbersImageStripC.add(numberImage6);
+		
+		numbers.add(numbersImageStripA);
+		numbers.add(numbersImageStripB);
+		numbers.add(numbersImageStripC);
 		
 		bottomMT.add(pictures);
+		bottomMT.add(numbers);
 		
 		paneMT.add(bottomMT);
 	  	     		
