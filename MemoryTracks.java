@@ -9,6 +9,7 @@ import java.io.*;
 class MemoryTracks extends JFrame{   
     String[] imageCards = {"image1.png","image2.png","image3.png","image4.png","image5.png","image6.png"};
 	String[] numberCards = {"number1.png","number2.png","number3.png","number4.png","number5.png","number6.png"};
+	String[] colourCards = {"colour1.png","colour2.png","colour3.png","colour4.png","colour5.png","colour6.png"};
 //	Image[] imagesChosen = new Image[4];
 		
 	MemoryTracks(){
@@ -434,9 +435,103 @@ class MemoryTracks extends JFrame{
 		numbers.add(numbersImageStripA);
 		numbers.add(numbersImageStripB);
 		numbers.add(numbersImageStripC);
+		//-------------------------------------------------------------
+		JPanel colours = new JPanel();
+		colours.setLayout(new BoxLayout(colours, BoxLayout.PAGE_AXIS));
+	    colours.setBackground(Color.decode("#ffffaa"));
 		
+		JPanel coloursLabelStrip = new JPanel();
+		coloursLabelStrip.setBackground(Color.decode("#bbbbbb"));
+		
+		JLabel coloursLabel = new JLabel("Colours");
+		coloursLabel.setFont(new Font("Arial",Font.BOLD,34));
+				
+		coloursLabelStrip.add(coloursLabel);
+		colours.add(coloursLabelStrip);
+		
+		JPanel coloursImageStripA = new JPanel();
+		coloursImageStripA.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel colourImage1 = new JPanel();
+		colourImage1.setBackground(Color.decode("#dddddd"));
+		colourImage1.setPreferredSize(new Dimension(60,60));
+		Icon colImage1; 	
+        JLabel colLabel1;	
+	    colImage1 = new ImageIcon("img/" + colourCards[0]);
+		colLabel1 = new JLabel(colImage1);
+		colLabel1.setPreferredSize(new Dimension(60,60));
+		colourImage1.add(colLabel1);
+		
+		JPanel colourImage2 = new JPanel();
+		colourImage2.setBackground(Color.decode("#dddddd"));
+		colourImage2.setPreferredSize(new Dimension(60,60));
+		Icon colImage2; 	
+        JLabel colLabel2;	
+	    colImage2 = new ImageIcon("img/" + colourCards[1]);
+		colLabel2 = new JLabel(colImage2);
+		colLabel2.setPreferredSize(new Dimension(60,60));
+		colourImage2.add(colLabel2);
+		
+		JPanel coloursImageStripB = new JPanel();
+		coloursImageStripB.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel colourImage3 = new JPanel();
+		colourImage3.setBackground(Color.decode("#dddddd"));
+		colourImage3.setPreferredSize(new Dimension(60,60));
+		Icon colImage3; 	
+        JLabel colLabel3;	
+	    colImage3 = new ImageIcon("img/" + colourCards[2]);
+		colLabel3 = new JLabel(colImage3);
+		colLabel3.setPreferredSize(new Dimension(60,60));
+		colourImage3.add(colLabel3);
+		
+		JPanel colourImage4 = new JPanel();
+		colourImage4.setBackground(Color.decode("#dddddd"));
+		colourImage4.setPreferredSize(new Dimension(60,60));
+		Icon colImage4; 	
+        JLabel colLabel4;	
+	    colImage4 = new ImageIcon("img/" + colourCards[3]);
+		colLabel4 = new JLabel(colImage4);
+		colLabel4.setPreferredSize(new Dimension(60,60));
+		colourImage4.add(colLabel4);
+		
+		JPanel coloursImageStripC = new JPanel();
+		coloursImageStripC.setBackground(Color.decode("#bbbbbb"));
+		
+		JPanel colourImage5 = new JPanel();
+		colourImage5.setBackground(Color.decode("#dddddd"));
+		colourImage5.setPreferredSize(new Dimension(60,60));
+		Icon colImage5; 	
+        JLabel colLabel5;	
+	    colImage5 = new ImageIcon("img/" + colourCards[4]);
+		colLabel5 = new JLabel(colImage5);
+		colLabel5.setPreferredSize(new Dimension(60,60));
+		colourImage5.add(colLabel5);
+		
+		JPanel colourImage6 = new JPanel();
+		colourImage6.setBackground(Color.decode("#dddddd"));
+		colourImage6.setPreferredSize(new Dimension(60,60));
+		Icon colImage6; 	
+        JLabel colLabel6;	
+	    colImage6 = new ImageIcon("img/" + colourCards[5]);
+		colLabel6 = new JLabel(colImage6);
+		colLabel6.setPreferredSize(new Dimension(60,60));
+		colourImage6.add(colLabel6);
+		
+		coloursImageStripA.add(colourImage1);
+		coloursImageStripA.add(colourImage2);
+		coloursImageStripB.add(colourImage3);
+		coloursImageStripB.add(colourImage4);
+		coloursImageStripC.add(colourImage5);
+		coloursImageStripC.add(colourImage6);
+		
+		colours.add(coloursImageStripA);
+		colours.add(coloursImageStripB);
+		colours.add(coloursImageStripC);
+	//	--------------------------------------------------------------
 		bottomMT.add(pictures);
 		bottomMT.add(numbers);
+		bottomMT.add(colours);
 		
 		paneMT.add(bottomMT);
 	  	     		
